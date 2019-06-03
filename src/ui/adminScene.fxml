@@ -6,6 +6,8 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -13,11 +15,22 @@
    <children>
       <Label layoutX="351.0" layoutY="7.0" prefHeight="46.0" prefWidth="99.0" text="Admin" textFill="#ff0101">
          <font>
-            <Font size="31.0" />
+            <Font name="System Bold" size="31.0" />
          </font>
       </Label>
-      <Button layoutX="24.0" layoutY="17.0" mnemonicParsing="false" onAction="#dangxuat" text="Đăng xuất" />
-      <AnchorPane fx:id="qlnv_Scene" layoutY="83.0" prefHeight="418.0" prefWidth="800.0" visible="false">
+      <Button layoutX="24.0" layoutY="17.0" mnemonicParsing="false" onAction="#dangxuat" prefHeight="46.0" prefWidth="120.0" text="Đăng xuất">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane fx:id="qlnv_Scene" layoutY="83.0" prefHeight="418.0" prefWidth="800.0">
          <children>
             <TableView fx:id="table_QLNV" onMouseClicked="#chitiet_Nhanvien" prefHeight="418.0" prefWidth="508.0">
               <columns>
@@ -35,16 +48,32 @@
                   <Font name="System Bold Italic" size="17.0" />
                </font>
             </Label>
-            <Label layoutX="520.0" layoutY="43.0" text="Mã NV" />
-            <Label layoutX="519.0" layoutY="81.0" text="Tên NV" />
-            <Label layoutX="520.0" layoutY="121.0" text="username" />
-            <Label layoutX="520.0" layoutY="158.0" prefHeight="17.0" prefWidth="52.0" text="password" />
+            <Label layoutX="520.0" layoutY="43.0" text="Mã NV">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="519.0" layoutY="81.0" text="Tên NV">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="520.0" layoutY="121.0" text="Username">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="520.0" layoutY="158.0" prefHeight="21.0" prefWidth="70.0" text="Password">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
             <TextField fx:id="tennv_text" layoutX="603.0" layoutY="77.0" />
             <TextField fx:id="username_text" layoutX="603.0" layoutY="117.0" />
             <TextField fx:id="password_text" layoutX="603.0" layoutY="154.0" />
             <Label layoutX="520.0" layoutY="209.0" prefHeight="17.0" prefWidth="58.0" text="Mã CV">
                <font>
-                  <Font name="System Bold" size="16.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
             </Label>
             <ComboBox fx:id="macv_Combobox" layoutX="603.0" layoutY="209.0" prefWidth="150.0" />
@@ -54,22 +83,62 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Button layoutX="528.0" layoutY="304.0" mnemonicParsing="false" onAction="#themNhanVien" text="Thêm" />
-            <Button layoutX="603.0" layoutY="304.0" mnemonicParsing="false" onAction="#xoaNhanVien" text="Xóa" />
-            <Button layoutX="664.0" layoutY="304.0" mnemonicParsing="false" onAction="#suaNhanVien" text="Sửa" />
+            <Button layoutX="521.0" layoutY="304.0" mnemonicParsing="false" onAction="#themNhanVien" prefHeight="33.0" prefWidth="70.0" text="Thêm">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/profile_edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="596.0" layoutY="304.0" mnemonicParsing="false" onAction="#xoaNhanVien" text="Xóa">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/btn_delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="662.0" layoutY="304.0" mnemonicParsing="false" onAction="#suaNhanVien" text="Sửa">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
             <Label fx:id="manv_label" layoutX="603.0" layoutY="43.0" prefHeight="17.0" prefWidth="149.0">
                <font>
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
-            <Button layoutX="726.0" layoutY="304.0" mnemonicParsing="false" onAction="#reset" text="reset" />
-            <Button layoutX="531.0" layoutY="355.0" mnemonicParsing="false" onAction="#xemQLANPHAM" prefHeight="53.0" prefWidth="238.0" text="Quản lý báo - NXB" textFill="#ff0c0c">
+            <Button layoutX="726.0" layoutY="304.0" mnemonicParsing="false" onAction="#reset" text="reset">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/gtk-refresh.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="520.0" layoutY="355.0" mnemonicParsing="false" onAction="#xemQLANPHAM" prefHeight="53.0" prefWidth="275.0" text="Quản lý báo - NXB" textFill="#ff0c0c">
                <font>
                   <Font name="System Bold" size="18.0" />
-               </font></Button>
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/database_connect.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="qlap_Scene" layoutY="83.0" prefHeight="418.0" prefWidth="800.0">
+      <AnchorPane fx:id="qlap_Scene" layoutY="83.0" prefHeight="418.0" prefWidth="800.0" visible="false">
          <children>
             <TableView fx:id="table_Anpham" onMouseClicked="#chitiet_Anpham" prefHeight="265.0" prefWidth="495.0">
               <columns>
@@ -85,22 +154,22 @@
                 <TableColumn fx:id="tennxb_nxb_column" prefWidth="178.0" text="Tên Nhà xuất bản" />
               </columns>
             </TableView>
-            <Label layoutX="578.0" text="Quản lý Ấn phẩm">
+            <Label layoutX="578.0" text="Quản lý Ấn phẩm" textFill="#170000">
                <font>
                   <Font name="System Bold Italic" size="20.0" />
                </font>
             </Label>
             <Label layoutX="508.0" layoutY="42.0" text="Mã Ấn phẩm">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font></Label>
             <Label layoutX="508.0" layoutY="73.0" prefHeight="21.0" prefWidth="99.0" text="Tên Ấn phẩm">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font></Label>
             <Label layoutX="512.0" layoutY="137.0" text="Mã NXB">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font></Label>
             <Label layoutX="510.0" layoutY="105.0" prefHeight="17.0" prefWidth="69.0" text="Giá / Quý">
                <font>
@@ -111,29 +180,85 @@
             <TextField fx:id="tenap_text" layoutX="607.0" layoutY="71.0" />
             <TextField fx:id="giaap_text" layoutX="607.0" layoutY="103.0" />
             <ComboBox fx:id="manxb_Combobox" layoutX="607.0" layoutY="135.0" prefWidth="150.0" />
-            <Label layoutX="155.0" layoutY="266.0" text="Quản lý Nhà xuất bản">
+            <Label layoutX="155.0" layoutY="266.0" text="Quản lý Nhà xuất bản" textFill="#e82121">
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Bold Italic" size="19.0" />
                </font>
             </Label>
             <Label layoutX="43.0" layoutY="308.0" text="Mã NXB">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Label>
             <Label layoutX="41.0" layoutY="362.0" text="Tên NXB">
                <font>
-                  <Font size="17.0" />
+                  <Font name="System Bold" size="17.0" />
                </font></Label>
             <TextField fx:id="tennxb_text" layoutX="127.0" layoutY="363.0" />
-            <Button layoutX="608.0" layoutY="184.0" mnemonicParsing="false" onAction="#themAnpham" text="Thêm" />
-            <Button layoutX="670.0" layoutY="184.0" mnemonicParsing="false" onAction="#xoaAnpham" text="Xóa" />
-            <Button layoutX="722.0" layoutY="184.0" mnemonicParsing="false" onAction="#suaAnpham" text="Sửa" />
-            <Button layoutX="514.0" layoutY="223.0" mnemonicParsing="false" onAction="#xemQLNV" prefHeight="25.0" prefWidth="262.0" text="Quản lý nhân viên" />
+            <Button layoutX="515.0" layoutY="181.0" mnemonicParsing="false" onAction="#themAnpham" prefHeight="33.0" prefWidth="86.0" text="Thêm">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="21.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/btn_add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="613.0" layoutY="181.0" mnemonicParsing="false" onAction="#xoaAnpham" prefHeight="33.0" prefWidth="86.0" text="Xóa">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/btn_delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="708.0" layoutY="182.0" mnemonicParsing="false" onAction="#suaAnpham" prefHeight="33.0" prefWidth="79.0" text="Sửa">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="514.0" layoutY="223.0" mnemonicParsing="false" onAction="#xemQLNV" prefHeight="33.0" prefWidth="275.0" text="Quản lý nhân viên">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/employee.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
             <TextField fx:id="manxb_text" layoutX="127.0" layoutY="306.0" />
-            <Button layoutX="357.0" layoutY="306.0" mnemonicParsing="false" onAction="#themNXB" prefHeight="25.0" prefWidth="58.0" text="Thêm" />
-            <Button layoutX="358.0" layoutY="342.0" mnemonicParsing="false" onAction="#xoaNXB" prefHeight="25.0" prefWidth="58.0" text="Xóa" />
-            <Button layoutX="359.0" layoutY="376.0" mnemonicParsing="false" onAction="#suaNXB" prefHeight="25.0" prefWidth="58.0" text="Sửa" />
+            <Button layoutX="357.0" layoutY="304.0" mnemonicParsing="false" onAction="#themNXB" prefHeight="33.0" prefWidth="86.0" text="Thêm">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/btn_add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="358.0" layoutY="341.0" mnemonicParsing="false" onAction="#xoaNXB" prefHeight="33.0" prefWidth="86.0" text="Xóa">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/btn_delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="359.0" layoutY="376.0" mnemonicParsing="false" onAction="#suaNXB" prefHeight="33.0" prefWidth="86.0" text="Sửa">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </children>

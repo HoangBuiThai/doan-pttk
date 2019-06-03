@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/adminScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/adminScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/employeeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/employeeScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/hoadonScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/hoadonScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/managerScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/managerScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/shipperScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/shipperScene.fxml" afterDir="false" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -60,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/hoadonController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="468">
-              <caret line="244" lean-forward="true" selection-start-line="244" selection-end-line="244" />
+              <caret line="244" selection-start-line="244" selection-end-line="244" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2905#3149#0" />
@@ -140,32 +147,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/hoadonScene.fxml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ui/adminScene.fxml">
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/employeeScene.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/managerScene.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="41" column="82" selection-start-line="41" selection-start-column="82" selection-end-line="41" selection-end-column="82" />
+            <state relative-caret-position="318">
+              <caret line="73" column="99" lean-forward="true" selection-start-line="73" selection-start-column="99" selection-end-line="73" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -185,12 +172,17 @@
       <find>makh</find>
       <find>auto_id_khachhang</find>
       <find>error</find>
+      <find>thêm</find>
+      <find>reset</find>
     </findStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -202,9 +194,7 @@
         <option value="$PROJECT_DIR$/src/Model/news.java" />
         <option value="$PROJECT_DIR$/src/Model/Person.java" />
         <option value="$PROJECT_DIR$/src/Model/bao.java" />
-        <option value="$PROJECT_DIR$/src/ui/adminScene.fxml" />
         <option value="$PROJECT_DIR$/src/Model/ShipperTable.java" />
-        <option value="$PROJECT_DIR$/src/ui/shipperScene.fxml" />
         <option value="$PROJECT_DIR$/src/Model/KhachHangDAO.java" />
         <option value="$PROJECT_DIR$/src/Model/Anpham.java" />
         <option value="$PROJECT_DIR$/src/Model/QuanHuyen.java" />
@@ -221,20 +211,23 @@
         <option value="$PROJECT_DIR$/src/Controller/adminController.java" />
         <option value="$PROJECT_DIR$/src/Controller/managerController.java" />
         <option value="$PROJECT_DIR$/src/ui/loginScene.fxml" />
-        <option value="$PROJECT_DIR$/src/ui/managerScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Controller/hoadonController.java" />
         <option value="$PROJECT_DIR$/src/ui/employeeScene.fxml" />
         <option value="$PROJECT_DIR$/src/ui/hoadonScene.fxml" />
-        <option value="$PROJECT_DIR$/src/Controller/hoadonController.java" />
+        <option value="$PROJECT_DIR$/src/ui/managerScene.fxml" />
+        <option value="$PROJECT_DIR$/src/ui/shipperScene.fxml" />
+        <option value="$PROJECT_DIR$/src/ui/adminScene.fxml" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="916" />
-    <option name="y" value="149" />
-    <option name="width" value="1017" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1105" />
     <option name="height" value="876" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -293,6 +286,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Report" />
@@ -419,7 +413,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.12633263" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.10021322" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -557,22 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/adminScene.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="52" column="21" lean-forward="true" selection-end-line="140" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/shipperScene.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -668,36 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/managerScene.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="41" column="82" selection-start-line="41" selection-start-column="82" selection-end-line="41" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/employeeScene.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/NXB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#HienThiNXB#0;class#NXB#0" />
-            <element signature="method#themNXB#0;class#NXB#0" />
-            <element signature="method#suaNXB#0;class#NXB#0" />
-            <element signature="method#xoaNXB#0;class#NXB#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/managerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -732,18 +680,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/hoadonScene.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/hoadonController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
-          <caret line="244" lean-forward="true" selection-start-line="244" selection-end-line="244" />
+          <caret line="244" selection-start-line="244" selection-end-line="244" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2905#3149#0" />
@@ -761,6 +701,60 @@
             <element signature="e#9145#9648#0" />
             <element signature="e#9654#9810#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/employeeScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/hoadonScene.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="174" column="64" lean-forward="true" selection-start-line="174" selection-start-column="64" selection-end-line="174" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/managerScene.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/shipperScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="55" column="142" lean-forward="true" selection-start-line="55" selection-start-column="142" selection-end-line="55" selection-end-column="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/NXB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#HienThiNXB#0;class#NXB#0" />
+            <element signature="method#themNXB#0;class#NXB#0" />
+            <element signature="method#suaNXB#0;class#NXB#0" />
+            <element signature="method#xoaNXB#0;class#NXB#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/adminScene.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="73" column="99" lean-forward="true" selection-start-line="73" selection-start-column="99" selection-end-line="73" selection-end-column="99" />
         </state>
       </provider>
     </entry>
