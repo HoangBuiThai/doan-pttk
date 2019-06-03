@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500" prefWidth="900" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.loginController">
+   <children>
+      <Label layoutX="391.0" layoutY="70.0" text="Đăng nhập" textAlignment="CENTER" textFill="#e41414">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="278.0" layoutY="171.0" prefHeight="17.0" prefWidth="73.0" text="USERNAME">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="280.0" layoutY="234.0" text="PASSWORD" />
+      <TextField fx:id="usernameTextfield" layoutX="388.0" layoutY="167.0" />
+      <Button fx:id="btnLogin" layoutX="414.0" layoutY="287.0" mnemonicParsing="false" onAction="#performLoginAction" prefHeight="36.0" prefWidth="96.0" text="OK">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Label fx:id="errorTextfield" layoutX="264.0" layoutY="348.0" prefHeight="17.0" prefWidth="247.0" />
+      <PasswordField fx:id="passwordTextfield" layoutX="388.0" layoutY="230.0" />
+   </children>
+</AnchorPane>

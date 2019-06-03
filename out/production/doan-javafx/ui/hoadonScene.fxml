@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.hoadonController">
+   <children>
+      <Label layoutX="348.0" layoutY="14.0" text="Hóa đơn" textFill="#dd1313">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="makh_label" layoutX="179.0" layoutY="55.0" />
+      <Label fx:id="tenkh_label" layoutX="179.0" layoutY="77.0" />
+      <Label layoutX="14.0" layoutY="75.0" text="Tên khách hàng">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="52.0" text="Mã khách hàng">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="573.0" layoutY="54.0" prefHeight="21.0" prefWidth="102.0" text="Nhân viên">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Label fx:id="tennv_label" layoutX="698.0" layoutY="54.0" prefHeight="17.0" prefWidth="81.0" />
+      <AnchorPane fx:id="cthd_scene" layoutY="116.0" prefHeight="384.0" prefWidth="900.0" visible="false">
+         <children>
+            <TableView fx:id="table_Anpham" onMouseClicked="#getDetailBao" prefHeight="384.0" prefWidth="480.0">
+              <columns>
+                <TableColumn fx:id="maap_ap_column" prefWidth="96.0" text="Mã ấn phẩm" />
+                <TableColumn fx:id="manxb_ap_column" prefWidth="111.0" text="Mã NXB" />
+                  <TableColumn fx:id="tenap_ap_column" prefWidth="131.0" text="Tên ấn phẩm" />
+                  <TableColumn fx:id="gia_ap_column" prefWidth="141.0" text="Giá / Quý" />
+              </columns>
+            </TableView>
+            <Label layoutX="622.0" layoutY="-3.0" text="Lập hóa đơn" textFill="#e41111">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="533.0" layoutY="140.0" text="Thời gian">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <ComboBox fx:id="timeCombobox" layoutX="622.0" layoutY="136.0" prefWidth="150.0" />
+            <Button layoutX="779.0" layoutY="136.0" mnemonicParsing="false" onAction="#themCTHD" text="Thêm" />
+            <TableView fx:id="table_CTHD" layoutX="481.0" layoutY="211.0" prefHeight="173.0" prefWidth="422.0">
+              <columns>
+                  <TableColumn fx:id="mahd_cthd_column" prefWidth="67.0" text="Mã HD" />
+                <TableColumn fx:id="maap_cthd_column" prefWidth="92.0" text="Mã ấn phẩm" />
+                  <TableColumn fx:id="ngayketthuc_cthd_column" prefWidth="135.0" text="Ngày kết thúc" />
+                  <TableColumn fx:id="gia_cthd_column" prefWidth="127.0" text="Giá" />
+              </columns>
+            </TableView>
+            <Label layoutX="532.0" layoutY="72.0" text="Mã ấn phẩm">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="maap_label" layoutX="622.0" layoutY="70.0" prefHeight="17.0" prefWidth="150.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label layoutX="533.0" layoutY="107.0" prefHeight="17.0" prefWidth="37.0" text="Giá">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="gia_label" layoutX="622.0" layoutY="107.0" prefHeight="17.0" prefWidth="128.0" />
+            <Button layoutX="488.0" layoutY="2.0" mnemonicParsing="false" onAction="#back" text="Xem Hóa đơn" />
+            <Label layoutX="533.0" layoutY="35.0" text="Mã hóa đơn">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <Label fx:id="mahd_label" layoutX="646.0" layoutY="31.0" prefHeight="25.0" prefWidth="81.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Button layoutX="636.0" layoutY="180.0" mnemonicParsing="false" onAction="#thanhtoan" prefHeight="25.0" prefWidth="136.0" text="THANH TOÁN" />
+            <Label fx:id="error_label1" layoutX="470.0" layoutY="184.0" textFill="#f80202" />
+            <Button layoutX="777.0" layoutY="168.0" mnemonicParsing="false" onAction="#xoaCTHD" prefHeight="25.0" prefWidth="50.0" text="Xóa" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="hd_scene" layoutY="122.0" prefHeight="376.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <TableView fx:id="table_Hoadon" prefHeight="376.0" prefWidth="586.0">
+              <columns>
+                <TableColumn fx:id="mahd_hd_column" prefWidth="67.0" text="Mã HD" />
+                  <TableColumn fx:id="makh_hd_column" prefWidth="93.0" text="Mã KH" />
+                  <TableColumn fx:id="manv_hd_column" prefWidth="85.0" text="Nhân viên" />
+                  <TableColumn fx:id="ngaylap_hd_column" prefWidth="112.0" text="Ngày khởi tạo" />
+                  <TableColumn fx:id="tongtien_hd_column" prefWidth="128.0" text="Tong Tien" />
+                  <TableColumn fx:id="thanhtoan_hd_column" prefWidth="100.0" text="Thanh toán" />
+              </columns>
+            </TableView>
+            <Button layoutX="695.0" layoutY="171.0" mnemonicParsing="false" onAction="#XemCTHD" prefHeight="34.0" prefWidth="102.0" text="Thêm ấn phẩm" />
+            <Button layoutX="685.0" layoutY="53.0" mnemonicParsing="false" onAction="#lapHD" prefHeight="63.0" prefWidth="121.0" text="Lập hóa đơn mới" />
+            <Button layoutX="703.0" layoutY="256.0" mnemonicParsing="false" onAction="#inHD" prefHeight="34.0" prefWidth="87.0" text="In hóa đơn" />
+            <Label fx:id="error_label" layoutX="592.0" layoutY="218.0" prefHeight="21.0" prefWidth="297.0" textAlignment="CENTER" textFill="#f50c0c">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="665.0" layoutY="1.0" text="QUẢN LÝ HÓA ĐƠN" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#trangchu" prefHeight="25.0" prefWidth="167.0" text="&lt;&lt;  Quản lý khách hàng" />
+      <Label layoutX="573.0" layoutY="89.0" prefHeight="21.0" prefWidth="102.0" text="Mã nhân viên">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="manv_label" layoutX="702.0" layoutY="89.0" prefHeight="17.0" prefWidth="73.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.managerController">
+   <children>
+      <Label layoutX="315.0" layoutY="14.0" prefHeight="45.0" prefWidth="241.0" text="Quản lý kho" textFill="#ff0505">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="sceneQLKK" layoutY="86.0" prefHeight="500" prefWidth="900.0">
+         <children>
+            <TableView fx:id="tableKiemKho" prefHeight="500.0" prefWidth="596.0">
+              <columns>
+                <TableColumn fx:id="maap_kiemkho_column" prefWidth="128.0" text="Mã Ấn phẩm" />
+                <TableColumn fx:id="tenap_kiemkho_column" prefWidth="270.0" text="Tên Ấn phẩm" />
+                  <TableColumn fx:id="sl_kiemkho_column" prefWidth="197.0" text="Số lượng" />
+              </columns>
+            </TableView>
+            <Label layoutX="656.0" text="Kiểm kê lượng báo" textFill="#f20b0b">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+            </Label>
+            <Button layoutX="660.0" layoutY="167.0" mnemonicParsing="false" onAction="#manhinhQLPP" prefHeight="83.0" prefWidth="195.0" text="Quản lý phân phát">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#dangxuat" prefHeight="45.0" prefWidth="95.0" text="Đăng xuất">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <AnchorPane fx:id="sceneQLPP" layoutY="86.0" prefHeight="500.0" prefWidth="900.0" visible="false">
+         <children>
+            <TableView fx:id="tableNhanVien" onMouseClicked="#laychitietThongtinNV" prefHeight="500.0" prefWidth="572.0">
+              <columns>
+                <TableColumn fx:id="manv_nv_column" prefWidth="66.0" text="Mã NV" />
+                <TableColumn fx:id="maquan_nv_column" prefWidth="79.0" text="Mã Quận" />
+                  <TableColumn fx:id="macv_nv_column" prefWidth="64.0" text="Mã CV" />
+                  <TableColumn fx:id="tennv_nv_column" prefWidth="98.0" text="Họ Tên" />
+                  <TableColumn fx:id="ngayvl_nv_column" prefWidth="98.0" text="NGVL" />
+                  <TableColumn fx:id="username_nv_column" text="username" />
+                  <TableColumn fx:id="password_nv_column" prefWidth="86.0" text="password" />
+              </columns>
+            </TableView>
+            <Label layoutX="651.0" text="Quản lý Phân phát" textFill="#ff0909">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="586.0" layoutY="51.0" text="Mã NV">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label layoutX="584.0" layoutY="90.0" text="Tên NV">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label layoutX="588.0" layoutY="131.0" text="username">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label layoutX="587.0" layoutY="169.0" text="password">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label layoutX="587.0" layoutY="202.0" text="Mã CV">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label layoutX="588.0" layoutY="254.0" text="Mã Quận">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <ComboBox fx:id="quanCombobox" layoutX="687.0" layoutY="255.0" prefWidth="150.0" />
+            <Label fx:id="manv_label" layoutX="687.0" layoutY="54.0" prefHeight="17.0" prefWidth="122.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label fx:id="tennv_label" layoutX="692.0" layoutY="95.0" prefHeight="17.0" prefWidth="115.0" />
+            <Label fx:id="username_label" layoutX="692.0" layoutY="134.0" prefHeight="17.0" prefWidth="115.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label fx:id="password_label" layoutX="691.0" layoutY="172.0" prefHeight="17.0" prefWidth="115.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label fx:id="macv_label" layoutX="692.0" layoutY="205.0" prefHeight="17.0" prefWidth="115.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Button layoutX="691.0" layoutY="306.0" mnemonicParsing="false" onAction="#capnhat" prefHeight="30.0" prefWidth="143.0" text="Cập nhật" />
+            <Button layoutX="637.0" layoutY="390.0" mnemonicParsing="false" onAction="#manhinhQLKK" prefHeight="57.0" prefWidth="204.0" text="KIỂM KHO">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
