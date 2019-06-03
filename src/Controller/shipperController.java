@@ -70,23 +70,6 @@ public class shipperController implements Initializable {
             e.printStackTrace();
         }
 
-      /*  String sql_query_shipperTable = "{call giaohang_table(?,?,?,?,?)}";
-        try{
-            listShipperTable = FXCollections.observableArrayList();
-            Connection conn = DbConnection.getConnectionAdmin();
-            callableStatement = conn.prepareCall(sql_query_shipperTable);
-            callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
-            callableStatement.setString(2,maquan);
-            callableStatement.registerOutParameter(3,Types.VARCHAR);
-            callableStatement.registerOutParameter(4,Types.VARCHAR);
-            callableStatement.registerOutParameter(5,Types.VARCHAR);
-
-            callableStatement.executeQuery();
-
-            ResultSet rs = (ResultSet)callableStatement.getObject(1);
-            while(rs.next()){
-                listShipperTable.add(new ShipperTable(rs.getString(1),rs.getString(2),rs.getString(3)));
-            }*/
       listGiaoHang = KhachHang.layDiaChiGiaoHang(maquan);
 
             tenkh_gh_column.setCellValueFactory(new PropertyValueFactory<KhachHang,String>("hoten"));

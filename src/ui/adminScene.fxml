@@ -39,8 +39,8 @@
                   <TableColumn fx:id="macv_qlnv_column" prefWidth="55.0" text="Mã CV" />
                   <TableColumn fx:id="tennv_qlnv_column" prefWidth="109.0" text="Tên Nhân viên" />
                   <TableColumn fx:id="ngayvaolam_qlnv_column" prefWidth="86.0" text="Ngày vào làm" />
-                  <TableColumn fx:id="username_qlnv_column" prefWidth="79.0" text="username" />
-                  <TableColumn fx:id="password_qlnv_column" prefWidth="63.0" text="pasword" />
+                  <TableColumn fx:id="username_qlnv_column" prefWidth="79.0" text="Username" />
+                  <TableColumn fx:id="password_qlnv_column" prefWidth="63.0" text="Pasword" />
               </columns>
             </TableView>
             <Label layoutX="590.0" layoutY="1.0" prefHeight="26.0" prefWidth="175.0" text="Quản lý nhân viên" textFill="#e80606">
@@ -68,22 +68,22 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="tennv_text" layoutX="603.0" layoutY="77.0" />
-            <TextField fx:id="username_text" layoutX="603.0" layoutY="117.0" />
-            <TextField fx:id="password_text" layoutX="603.0" layoutY="154.0" />
-            <Label layoutX="520.0" layoutY="209.0" prefHeight="17.0" prefWidth="58.0" text="Mã CV">
+            <TextField fx:id="tennv_text" layoutX="610.0" layoutY="77.0" />
+            <TextField fx:id="username_text" layoutX="609.0" layoutY="117.0" />
+            <TextField fx:id="password_text" layoutX="609.0" layoutY="154.0" />
+            <Label layoutX="521.0" layoutY="209.0" prefHeight="17.0" prefWidth="58.0" text="Mã CV">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <ComboBox fx:id="macv_Combobox" layoutX="603.0" layoutY="209.0" prefWidth="150.0" />
-            <ComboBox fx:id="maquan_Combobox" layoutX="603.0" layoutY="254.0" prefWidth="150.0" />
+            <ComboBox fx:id="macv_Combobox" layoutX="610.0" layoutY="207.0" prefWidth="150.0" />
+            <ComboBox fx:id="maquan_Combobox" layoutX="612.0" layoutY="254.0" prefWidth="150.0" />
             <Label layoutX="519.0" layoutY="255.0" text="Mã Quận">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Button layoutX="521.0" layoutY="304.0" mnemonicParsing="false" onAction="#themNhanVien" prefHeight="33.0" prefWidth="70.0" text="Thêm">
+            <Button layoutX="521.0" layoutY="304.0" mnemonicParsing="false" onAction="#themNhanVien" prefHeight="26.0" prefWidth="70.0" text="Thêm">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -92,7 +92,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="596.0" layoutY="304.0" mnemonicParsing="false" onAction="#xoaNhanVien" text="Xóa">
+            <Button layoutX="614.0" layoutY="304.0" mnemonicParsing="false" onAction="#xoaNhanVien" prefHeight="33.0" prefWidth="66.0" text="Xóa">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -101,7 +101,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="662.0" layoutY="304.0" mnemonicParsing="false" onAction="#suaNhanVien" text="Sửa">
+            <Button layoutX="696.0" layoutY="304.0" mnemonicParsing="false" onAction="#suaNhanVien" prefHeight="25.0" prefWidth="66.0" text="Sửa">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -110,12 +110,12 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Label fx:id="manv_label" layoutX="603.0" layoutY="43.0" prefHeight="17.0" prefWidth="149.0">
+            <Label fx:id="manv_label" layoutX="613.0" layoutY="43.0" prefHeight="17.0" prefWidth="149.0" textFill="#1e09ff">
                <font>
-                  <Font name="System Bold Italic" size="12.0" />
+                  <Font name="System Bold Italic" size="15.0" />
                </font>
             </Label>
-            <Button layoutX="726.0" layoutY="304.0" mnemonicParsing="false" onAction="#reset" text="reset">
+            <Button layoutX="694.0" layoutY="35.0" mnemonicParsing="false" onAction="#reset" text="reset">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -124,7 +124,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="520.0" layoutY="355.0" mnemonicParsing="false" onAction="#xemQLANPHAM" prefHeight="53.0" prefWidth="275.0" text="Quản lý báo - NXB" textFill="#ff0c0c">
+            <Button layoutX="520.0" layoutY="355.0" mnemonicParsing="false" onAction="#xemQLANPHAM" prefHeight="53.0" prefWidth="246.0" text="Quản lý báo - NXB" textFill="#ff0c0c">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

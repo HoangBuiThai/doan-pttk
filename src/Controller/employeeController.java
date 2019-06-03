@@ -87,11 +87,6 @@ public class employeeController implements Initializable {
     private FilteredList filter;
 
 
-    //Database connection
-    private ConnectionClass DbConnection = new ConnectionClass();;
-    private PreparedStatement pst;
-    private CallableStatement callableStatement;
-
     public void setDetail(String name,String manv){
         usernameLabel.setText(name);
         manvLabel.setText(manv);
@@ -138,21 +133,7 @@ public class employeeController implements Initializable {
         this.load();
     }
 
-    /*@FXML
-    public void XoaKhachHang(ActionEvent event){
-        String sql_insert_kh ="{call XOAKHACHHANG(?)}";
-        try{
-            Connection conn = DbConnection.getConnectionAdmin();
-            callableStatement = conn.prepareCall(sql_insert_kh);
-            callableStatement.setString(1,mkhText.getText());
 
-            callableStatement.executeUpdate();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        this.loadKhachHang();
-        this.load();
-    }*/
 
     @FXML
     public void SuaKhachHang(ActionEvent event){
@@ -240,44 +221,6 @@ public class employeeController implements Initializable {
 
 
 
- /*try{
-            khachHangList = FXCollections.observableArrayList();
-            Connection conn = DbConnection.getConnectionAdmin();
-            callableStatement = conn.prepareCall(sql_query_customer);
-            callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
-            callableStatement.registerOutParameter(2,Types.VARCHAR);
-            callableStatement.registerOutParameter(3,Types.VARCHAR);
-            callableStatement.registerOutParameter(4,Types.VARCHAR);
-            callableStatement.registerOutParameter(5,Types.VARCHAR);
-            callableStatement.registerOutParameter(6,Types.VARCHAR);
-            callableStatement.registerOutParameter(7,Types.VARCHAR);
-
-            callableStatement.executeQuery();
-
-            ResultSet rs = (ResultSet)callableStatement.getObject(1);
-            while(rs.next()){
-                khachHangList.add(new KhachHang(count,rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6)));
-                count++;
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }catch (Exception e){
-            e.printStackTrace();
-        }finally {
-            try
-            {
-                if (callableStatement != null)
-                {
-                    callableStatement.close();
-                }
-            }
-            catch (SQLException sqlException)
-            {
-                sqlException.printStackTrace();
-            }
-
-       }*/
 
 
 

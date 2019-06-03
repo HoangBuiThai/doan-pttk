@@ -147,11 +147,14 @@ public class Hoadon {
 
     public static void inHD(String manv,String tennv,String makh,String mahd,int tongtien){
         try{
+            //Sửa 2 đường dẫn này trung với đường dẫn hiện tại của máy (Lưu ý đừng sửa chữ mahd trong url_report_output)!!! <3 GOODLUCK
+            String url_report_input = "C:\\Users\\BùiTháiHoàng\\Desktop\\doan-javafx\\src\\Report\\HD.jrxml";
+            String url_report_output = "C:\\Users\\BùiTháiHoàng\\Desktop\\doan-javafx\\src\\Report\\"+mahd+".pdf";
 
-            String url_report = "C:\\Users\\BùiTháiHoàng\\Desktop\\doan-javafx\\src\\Report\\"+mahd+".pdf";
             KhachHang kh = KhachHang.layThongtinKHbyMa(makh);
 
-            JasperReport jasperReport = JasperCompileManager.compileReport("C:\\Users\\BùiTháiHoàng\\Desktop\\doan-javafx\\src\\Report\\HD.jrxml");
+            JasperReport jasperReport = JasperCompileManager.compileReport(url_report_input);
+
 
             ConnectionClass DbConnection = new ConnectionClass();
             Connection conn = DbConnection.getConnectionAdmin();
@@ -167,7 +170,7 @@ public class Hoadon {
             parameters.put("v_tongtien",String.valueOf(tongtien));
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,parameters,conn);
 
-            JasperExportManager.exportReportToPdfFile(jasperPrint,url_report);
+            JasperExportManager.exportReportToPdfFile(jasperPrint,url_report_output);
             JasperViewer.viewReport(jasperPrint,false);
             System.out.println("hello");
         } catch (JRException e) {

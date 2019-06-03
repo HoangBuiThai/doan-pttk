@@ -181,7 +181,11 @@ public class hoadonController implements Initializable {
 
         Hoadon hd = table_Hoadon.getSelectionModel().getSelectedItem();
         if(hd!=null) {
-            Hoadon.inHD(manv_label.getText(), tennv_label.getText(), makh_label.getText(), hd.getMahd(), hd.getTongtien());
+            if(hd.getTongtien()!=0) {
+                Hoadon.inHD(manv_label.getText(), tennv_label.getText(), makh_label.getText(), hd.getMahd(), hd.getTongtien());
+            }else{
+                error_label.setText("Đơn hàng chưa hoàn tất");
+            }
         }else{
             error_label.setText("<<--- Vui lòng chọn Hóa đơn bên bảng");
         }
@@ -209,13 +213,6 @@ public class hoadonController implements Initializable {
     //Load màn hình Chi tiết hóa đơn
     public void XemCTHD(ActionEvent event){
         Hoadon selected = table_Hoadon.getSelectionModel().getSelectedItem();
-
-        //Lấy ngày hiện tại
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date date = new Date();
-        Calendar c = Calendar.getInstance();
-        c.setTime(date);
-        date=c.getTime();
 
         if(selected!=null) {
             if(selected.getThanhtoan()==0) {
