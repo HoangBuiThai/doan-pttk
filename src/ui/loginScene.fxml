@@ -11,6 +11,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500" prefWidth="900" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.loginController">
    <children>
+      <ImageView fitHeight="500" fitWidth="900"  pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/bg-login.jpg" />
+         </image>
+      </ImageView>
       <Label layoutX="384.0" layoutY="69.0" text="Đăng nhập" textAlignment="CENTER" textFill="#e41414">
          <font>
             <Font name="System Bold Italic" size="29.0" />

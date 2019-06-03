@@ -13,6 +13,11 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.employeeController">
    <children>
+      <ImageView fitHeight="500" fitWidth="900" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/bg-employee.jpg" />
+         </image>
+      </ImageView>
       <AnchorPane layoutY="96.0" prefHeight="398.0" prefWidth="900.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <TableView fx:id="tableKH" onMouseClicked="#getDetailCustomer" prefHeight="398.0" prefWidth="573.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -25,9 +30,9 @@
                   <TableColumn fx:id="sdtColumn" prefWidth="100.0" text="Số DT" />
               </columns>
             </TableView>
-            <Label layoutX="658.0" layoutY="-1.0" text="Thêm khách hàng">
+            <Label layoutX="648.0" layoutY="-3.0" text="Thêm khách hàng">
                <font>
-                  <Font name="System Bold Italic" size="20.0" />
+                  <Font name="System Bold Italic" size="23.0" />
                </font>
             </Label>
             <Label layoutX="599.0" layoutY="103.0" text="Họ tên">
@@ -114,7 +119,10 @@
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Label fx:id="usernameLabel" layoutX="99.0" layoutY="9.0" prefHeight="30.0" prefWidth="143.0" />
+      <Label fx:id="usernameLabel" layoutX="99.0" layoutY="9.0" prefHeight="30.0" prefWidth="143.0" textFill="#2713e1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
       <Label layoutX="12.0" layoutY="69.0" text="Tìm khách hàng">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
@@ -123,6 +131,9 @@
                </image>
             </ImageView>
          </graphic>
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
       </Label>
       <TextField fx:id="TimKH" layoutX="131.0" layoutY="66.0" onKeyReleased="#TimKhachHang" prefHeight="25.0" prefWidth="178.0">
       </TextField>
@@ -130,7 +141,7 @@
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Label fx:id="manvLabel" layoutX="99.0" layoutY="39.0" prefHeight="17.0" prefWidth="121.0" />
+      <Label fx:id="manvLabel" layoutX="99.0" layoutY="39.0" prefHeight="17.0" prefWidth="121.0" textFill="#3d10f2" />
       <Button layoutX="752.0" layoutY="23.0" mnemonicParsing="false" onAction="#dangxuat" prefHeight="40.0" prefWidth="136.0" text="Đăng xuất">
          <font>
             <Font name="System Bold" size="13.0" />

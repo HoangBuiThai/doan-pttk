@@ -4,13 +4,18 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.shipperController">
+<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.shipperController">
    <children>
+      <ImageView fitHeight="500" fitWidth="900" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/bg-shipper.jpg" />
+         </image>
+      </ImageView>
       <Label layoutX="333.0" layoutY="32.0" text="Giao Hàng" textFill="#ee0e0e">
          <font>
             <Font name="System Bold" size="27.0" />
@@ -23,12 +28,12 @@
             <TableColumn fx:id="tenap_gh_column" prefWidth="132.0" text="Tên Báo" />
         </columns>
       </TableView>
-      <Label layoutX="585.0" layoutY="179.0" text="Tên NV">
+      <Label layoutX="585.0" layoutY="179.0" text="Tên NV :">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="585.0" layoutY="136.0" prefHeight="17.0" prefWidth="76.0" text="Mã NV">
+      <Label layoutX="585.0" layoutY="136.0" prefHeight="34.0" prefWidth="94.0" text="Mã NV :">
          <font>
             <Font name="System Bold Italic" size="23.0" />
          </font>
@@ -38,19 +43,19 @@
             <Font name="System Bold Italic" size="32.0" />
          </font>
       </Label>
-      <Label fx:id="tenquan_label" layoutX="634.0" layoutY="371.0">
+      <Label fx:id="tenquan_label" layoutX="634.0" layoutY="371.0" textFill="#4201f5">
          <font>
-            <Font size="35.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Label>
-      <Label fx:id="manv_label" layoutX="685.0" layoutY="145.0">
+      <Label fx:id="manv_label" layoutX="694.0" layoutY="139.0" prefHeight="28.0" prefWidth="108.0">
          <font>
-            <Font size="15.0" />
+            <Font name="System Bold Italic" size="19.0" />
          </font>
       </Label>
-      <Label fx:id="tennv_label" layoutX="685.0" layoutY="187.0">
+      <Label fx:id="tennv_label" layoutX="694.0" layoutY="185.0" prefHeight="28.0" prefWidth="134.0">
          <font>
-            <Font size="15.0" />
+            <Font size="19.0" />
          </font>
       </Label>
       <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#dangxuat" prefHeight="51.0" prefWidth="186.0" text="Đăng xuất">
