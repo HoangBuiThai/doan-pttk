@@ -55,7 +55,7 @@
             <TextField fx:id="sdtText" layoutX="667.0" layoutY="171.0" />
             <TextField fx:id="diachiText" layoutX="668.0" layoutY="209.0" />
             <ComboBox fx:id="quanCombobox" layoutX="668.0" layoutY="244.0" prefWidth="150.0" />
-            <Button layoutX="669.0" layoutY="328.0" mnemonicParsing="false" onAction="#XemHoaDon" prefHeight="33.0" prefWidth="149.0" text="Xem hóa đơn" >
+            <Button layoutX="669.0" layoutY="328.0" mnemonicParsing="false" onAction="#XemHoaDon" prefHeight="33.0" prefWidth="149.0" text="Xem hóa đơn">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -110,11 +110,11 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="11.0" layoutY="18.0" text="Nhân viên: ">
+      <Label layoutX="11.0" layoutY="17.0" text="Nhân viên: ">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Label fx:id="usernameLabel" layoutX="99.0" layoutY="12.0" prefHeight="30.0" prefWidth="143.0" />
+      <Label fx:id="usernameLabel" layoutX="99.0" layoutY="9.0" prefHeight="30.0" prefWidth="143.0" />
       <Label layoutX="12.0" layoutY="69.0" text="Tìm khách hàng">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
@@ -124,13 +124,13 @@
             </ImageView>
          </graphic>
       </Label>
-      <TextField fx:id="TimKH" layoutX="131.0" layoutY="69.0" onKeyReleased="#TimKhachHang" prefHeight="25.0" prefWidth="178.0">
+      <TextField fx:id="TimKH" layoutX="131.0" layoutY="66.0" onKeyReleased="#TimKhachHang" prefHeight="25.0" prefWidth="178.0">
       </TextField>
-      <Label layoutX="11.0" layoutY="42.0" text="Mã Nhân viên">
+      <Label layoutX="11.0" layoutY="40.0" text="Mã Nhân viên">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Label fx:id="manvLabel" layoutX="99.0" layoutY="42.0" prefHeight="17.0" prefWidth="121.0" />
+      <Label fx:id="manvLabel" layoutX="99.0" layoutY="39.0" prefHeight="17.0" prefWidth="121.0" />
       <Button layoutX="752.0" layoutY="23.0" mnemonicParsing="false" onAction="#dangxuat" prefHeight="40.0" prefWidth="136.0" text="Đăng xuất">
          <font>
             <Font name="System Bold" size="13.0" />

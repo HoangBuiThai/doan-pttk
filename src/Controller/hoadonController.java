@@ -181,7 +181,11 @@ public class hoadonController implements Initializable {
 
         Hoadon hd = table_Hoadon.getSelectionModel().getSelectedItem();
         if(hd!=null) {
-            Hoadon.inHD(manv_label.getText(), tennv_label.getText(), makh_label.getText(), hd.getMahd(), hd.getTongtien());
+            if(hd.getTongtien()!=0) {
+                Hoadon.inHD(manv_label.getText(), tennv_label.getText(), makh_label.getText(), hd.getMahd(), hd.getTongtien());
+            }else{
+                error_label.setText("Đơn hàng chưa hoàn tất");
+            }
         }else{
             error_label.setText("<<--- Vui lòng chọn Hóa đơn bên bảng");
         }

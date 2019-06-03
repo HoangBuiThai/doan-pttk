@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/hoadonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/hoadonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Hoadon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Hoadon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/adminScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/adminScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/employeeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/employeeScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/hoadonScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/hoadonScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/managerScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/managerScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/shipperScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/shipperScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/loginScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/loginScene.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,36 +67,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/hoadonController.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/CTHD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="244" selection-start-line="244" selection-end-line="244" />
+            <state relative-caret-position="629">
+              <caret line="139" column="5" lean-forward="true" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2905#3149#0" />
-                <element signature="e#3155#3372#0" />
-                <element signature="e#3378#3960#0" />
-                <element signature="e#3966#4081#0" />
-                <element signature="e#4087#4378#0" />
-                <element signature="e#4361#4679#0" />
-                <element signature="e#6004#6567#0" />
-                <element signature="e#7464#7753#0" />
-                <element signature="e#7759#8005#0" />
-                <element signature="e#8011#8139#0" />
-                <element signature="e#8011#8523#0" />
-                <element signature="e#8529#9139#0" />
-                <element signature="e#9145#9648#0" />
-                <element signature="e#9654#9810#0" />
+                <element signature="method#HienThiCTHD#0;class#CTHD#0" />
+                <element signature="method#DanhSachKiemKho#0;class#CTHD#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/Hoadon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="147" column="90" selection-start-line="147" selection-start-column="90" selection-end-line="147" selection-end-column="90" />
+            <state relative-caret-position="360">
+              <caret line="163" column="42" lean-forward="true" selection-start-line="163" selection-start-column="42" selection-end-line="163" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1611#1612#0" expanded="true" />
@@ -106,7 +93,6 @@
                 <element signature="e#1732#1733#0" expanded="true" />
                 <element signature="method#HienThiHoaDon#0;class#Hoadon#0" />
                 <element signature="method#lapHD#0;class#Hoadon#0" />
-                <element signature="method#inHD#0;class#Hoadon#0" />
                 <element signature="method#thanhtoan#0;class#Hoadon#0" />
               </folding>
             </state>
@@ -134,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/NXB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="323">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#HienThiNXB#0;class#NXB#0" />
@@ -147,12 +133,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ui/adminScene.fxml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/loginScene.fxml">
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="73" column="99" lean-forward="true" selection-start-line="73" selection-start-column="99" selection-end-line="73" selection-end-column="99" />
+            <state relative-caret-position="400">
+              <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/employeeScene.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/adminScene.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="118" column="15" lean-forward="true" selection-start-line="118" selection-start-column="15" selection-end-line="124" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -206,17 +212,17 @@
         <option value="$PROJECT_DIR$/src/Controller/employeeController.java" />
         <option value="$PROJECT_DIR$/src/Model/KhachHang.java" />
         <option value="$PROJECT_DIR$/src/Model/CTHD.java" />
-        <option value="$PROJECT_DIR$/src/Model/Hoadon.java" />
         <option value="$PROJECT_DIR$/src/Model/NXB.java" />
         <option value="$PROJECT_DIR$/src/Controller/adminController.java" />
         <option value="$PROJECT_DIR$/src/Controller/managerController.java" />
-        <option value="$PROJECT_DIR$/src/ui/loginScene.fxml" />
-        <option value="$PROJECT_DIR$/src/Controller/hoadonController.java" />
-        <option value="$PROJECT_DIR$/src/ui/employeeScene.fxml" />
         <option value="$PROJECT_DIR$/src/ui/hoadonScene.fxml" />
         <option value="$PROJECT_DIR$/src/ui/managerScene.fxml" />
         <option value="$PROJECT_DIR$/src/ui/shipperScene.fxml" />
         <option value="$PROJECT_DIR$/src/ui/adminScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Controller/hoadonController.java" />
+        <option value="$PROJECT_DIR$/src/ui/loginScene.fxml" />
+        <option value="$PROJECT_DIR$/src/ui/employeeScene.fxml" />
+        <option value="$PROJECT_DIR$/src/Model/Hoadon.java" />
       </list>
     </option>
   </component>
@@ -595,18 +601,6 @@
     <entry file="file://$PROJECT_DIR$/src/Report/HD.jrxml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CTHD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="139" column="5" lean-forward="true" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#HienThiCTHD#0;class#CTHD#0" />
-            <element signature="method#DanhSachKiemKho#0;class#CTHD#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/adminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -638,80 +632,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/loginScene.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="111" selection-start-line="9" selection-start-column="111" selection-end-line="9" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/managerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#dangxuat#0;class#managerController#0" />
-            <element signature="method#capnhat#0;class#managerController#0" />
-            <element signature="method#loadDSKho#0;class#managerController#0" />
-            <element signature="method#loadQuan#0;class#managerController#0" />
-            <element signature="method#loadNhanvien#0;class#managerController#0" />
-            <element signature="method#load#0;class#managerController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Hoadon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="147" column="90" selection-start-line="147" selection-start-column="90" selection-end-line="147" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1611#1612#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1690#1691#0" expanded="true" />
-            <element signature="e#1732#1733#0" expanded="true" />
-            <element signature="method#HienThiHoaDon#0;class#Hoadon#0" />
-            <element signature="method#lapHD#0;class#Hoadon#0" />
-            <element signature="method#inHD#0;class#Hoadon#0" />
-            <element signature="method#thanhtoan#0;class#Hoadon#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/hoadonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="244" selection-start-line="244" selection-end-line="244" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2905#3149#0" />
-            <element signature="e#3155#3372#0" />
-            <element signature="e#3378#3960#0" />
-            <element signature="e#3966#4081#0" />
-            <element signature="e#4087#4378#0" />
-            <element signature="e#4361#4679#0" />
-            <element signature="e#6004#6567#0" />
-            <element signature="e#7464#7753#0" />
-            <element signature="e#7759#8005#0" />
-            <element signature="e#8011#8139#0" />
-            <element signature="e#8011#8523#0" />
-            <element signature="e#8529#9139#0" />
-            <element signature="e#9145#9648#0" />
-            <element signature="e#9654#9810#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/employeeScene.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/hoadonScene.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
@@ -736,10 +656,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/CTHD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="139" column="5" lean-forward="true" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#HienThiCTHD#0;class#CTHD#0" />
+            <element signature="method#DanhSachKiemKho#0;class#CTHD#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/managerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#dangxuat#0;class#managerController#0" />
+            <element signature="method#capnhat#0;class#managerController#0" />
+            <element signature="method#loadDSKho#0;class#managerController#0" />
+            <element signature="method#loadQuan#0;class#managerController#0" />
+            <element signature="method#loadNhanvien#0;class#managerController#0" />
+            <element signature="method#load#0;class#managerController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/hoadonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="213" column="43" lean-forward="true" selection-start-line="213" selection-start-column="43" selection-end-line="213" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2905#3149#0" />
+            <element signature="e#3155#3372#0" />
+            <element signature="e#3378#3960#0" />
+            <element signature="e#3966#4081#0" />
+            <element signature="e#4087#4378#0" />
+            <element signature="e#6004#6567#0" />
+            <element signature="e#7464#7753#0" />
+            <element signature="e#7759#8005#0" />
+            <element signature="e#8011#8139#0" />
+            <element signature="e#8011#8523#0" />
+            <element signature="e#8529#9139#0" />
+            <element signature="e#9145#9648#0" />
+            <element signature="e#9654#9810#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/NXB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="323">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#HienThiNXB#0;class#NXB#0" />
@@ -751,10 +722,43 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/adminScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="118" column="15" lean-forward="true" selection-start-line="118" selection-start-column="15" selection-end-line="124" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/loginScene.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="73" column="99" lean-forward="true" selection-start-line="73" selection-start-column="99" selection-end-line="73" selection-end-column="99" />
+        <state relative-caret-position="400">
+          <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/employeeScene.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Hoadon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="163" column="42" lean-forward="true" selection-start-line="163" selection-start-column="42" selection-end-line="163" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1611#1612#0" expanded="true" />
+            <element signature="e#1643#1644#0" expanded="true" />
+            <element signature="e#1690#1691#0" expanded="true" />
+            <element signature="e#1732#1733#0" expanded="true" />
+            <element signature="method#HienThiHoaDon#0;class#Hoadon#0" />
+            <element signature="method#lapHD#0;class#Hoadon#0" />
+            <element signature="method#thanhtoan#0;class#Hoadon#0" />
+          </folding>
         </state>
       </provider>
     </entry>
