@@ -129,13 +129,6 @@ public class adminController implements Initializable {
     private ObservableList<Nhanvien> listNhanvien;
     private ObservableList<Anpham> listAnpham;
     private ObservableList<NXB> listNXB;
-    private ObservableList<String> listNXB_Combobox;
-
-    //Database connection
-    //private ConnectionClass DbConnection = new ConnectionClass();
-    private PreparedStatement pst;
-    private CallableStatement callableStatement;
-
 
 
     @Override
@@ -323,19 +316,6 @@ public class adminController implements Initializable {
     }
 
     public void loadNXB_Combobox(){
-       /* String sql_query_nxbList = "Select * from NHAXUATBAN where isDelete=0";
-
-        try{
-            listNXB_Combobox = FXCollections.observableArrayList();
-            Connection conn = DbConnection.getConnectionAdmin();
-            ResultSet rs = conn.createStatement().executeQuery(sql_query_nxbList);
-            while(rs.next()){
-                listNXB_Combobox.add(rs.getString(1));
-            }
-            manxb_Combobox.setItems(listNXB_Combobox);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }*/
         ObservableList<String> list =FXCollections.observableArrayList();
         listNXB=NXB.HienThiNXB();
         for(int i=0;i<listNXB.size();i++){

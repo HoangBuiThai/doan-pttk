@@ -214,13 +214,6 @@ public class hoadonController implements Initializable {
     public void XemCTHD(ActionEvent event){
         Hoadon selected = table_Hoadon.getSelectionModel().getSelectedItem();
 
-        //Lấy ngày hiện tại
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date date = new Date();
-        Calendar c = Calendar.getInstance();
-        c.setTime(date);
-        date=c.getTime();
-
         if(selected!=null) {
             if(selected.getThanhtoan()==0) {
                 mahd_label.setText(selected.getMahd());
