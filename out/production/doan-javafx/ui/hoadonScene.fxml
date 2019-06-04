@@ -12,19 +12,30 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.hoadonController">
    <children>
+      <ImageView fitHeight="500" fitWidth="900" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/bg-hoadon.jpg" />
+         </image>
+      </ImageView>
       <Label layoutX="348.0" layoutY="14.0" text="Hóa đơn" textFill="#dd1313">
          <font>
             <Font name="System Bold Italic" size="29.0" />
          </font>
       </Label>
-      <Label fx:id="makh_label" layoutX="179.0" layoutY="55.0" />
-      <Label fx:id="tenkh_label" layoutX="179.0" layoutY="77.0" />
-      <Label layoutX="14.0" layoutY="75.0" text="Tên khách hàng">
+      <Label fx:id="makh_label" layoutX="167.0" layoutY="56.0" prefHeight="21.0" prefWidth="113.0" textFill="#2a0af8">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Label fx:id="tenkh_label" layoutX="167.0" layoutY="81.0" prefHeight="21.0" prefWidth="128.0" textFill="#1500fc">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="81.0" text="Tên khách hàng">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="16.0" layoutY="52.0" text="Mã khách hàng">
+      <Label layoutX="16.0" layoutY="56.0" text="Mã khách hàng">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -33,7 +44,10 @@
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font></Label>
-      <Label fx:id="tennv_label" layoutX="698.0" layoutY="54.0" prefHeight="17.0" prefWidth="81.0" />
+      <Label fx:id="tennv_label" layoutX="698.0" layoutY="54.0" prefHeight="21.0" prefWidth="113.0" textFill="#2e09e8">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
       <AnchorPane fx:id="cthd_scene" layoutY="116.0" prefHeight="384.0" prefWidth="900.0">
          <children>
             <TableView fx:id="table_Anpham" onMouseClicked="#getDetailBao" prefHeight="384.0" prefWidth="480.0">
@@ -46,7 +60,7 @@
             </TableView>
             <Label layoutX="633.0" layoutY="-3.0" text="Lập hóa đơn" textFill="#e41111">
                <font>
-                  <Font size="23.0" />
+                  <Font name="System Bold Italic" size="21.0" />
                </font>
             </Label>
             <Label layoutX="533.0" layoutY="140.0" text="Thời gian">
@@ -198,6 +212,9 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
-      <Label fx:id="manv_label" layoutX="702.0" layoutY="81.0" prefHeight="17.0" prefWidth="73.0" />
+      <Label fx:id="manv_label" layoutX="702.0" layoutY="81.0" prefHeight="17.0" prefWidth="73.0" textFill="#4403f5">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
    </children>
 </AnchorPane>

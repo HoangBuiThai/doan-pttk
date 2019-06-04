@@ -141,7 +141,10 @@
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-      <Label fx:id="manvLabel" layoutX="99.0" layoutY="39.0" prefHeight="17.0" prefWidth="121.0" textFill="#3d10f2" />
+      <Label fx:id="manvLabel" layoutX="99.0" layoutY="39.0" prefHeight="17.0" prefWidth="121.0" textFill="#3d10f2">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
       <Button layoutX="752.0" layoutY="23.0" mnemonicParsing="false" onAction="#dangxuat" prefHeight="40.0" prefWidth="136.0" text="Đăng xuất">
          <font>
             <Font name="System Bold" size="13.0" />
