@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -22,7 +23,7 @@
             <Font name="System Bold" size="35.0" />
          </font>
       </Label>
-      <AnchorPane fx:id="sceneQLKK" layoutY="86.0" prefHeight="377.0" prefWidth="900.0">
+      <AnchorPane fx:id="sceneQLKK" layoutY="86.0" prefHeight="377.0" prefWidth="900.0" visible="false">
          <children>
             <TableView fx:id="tableKiemKho" prefHeight="412.0" prefWidth="596.0">
               <columns>
@@ -44,6 +45,18 @@
                   <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="/images/employee.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="666.0" layoutY="285.0" mnemonicParsing="false" onAction="#manhinhBC" prefHeight="83.0" prefWidth="195.0" text="Báo cáo">
+               <font>
+                  <Font name="System Bold Italic" size="29.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/edit.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -150,6 +163,61 @@
                   </ImageView>
                </graphic>
             </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sceneBC" layoutY="86.0" prefHeight="419.0" prefWidth="900.0">
+         <children>
+            <Label layoutX="241.0" layoutY="14.0" text="Báo cáo" textFill="#260ec3">
+               <font>
+                  <Font name="System Bold Italic" size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="ngay_label" layoutX="241.0" layoutY="63.0" prefHeight="34.0" prefWidth="177.0">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="baocao_textarea" layoutX="241.0" layoutY="95.0" prefHeight="244.0" prefWidth="342.0" />
+            <Button layoutX="335.0" layoutY="339.0" mnemonicParsing="false" onAction="#themBaocao" prefHeight="45.0" prefWidth="164.0" text="Xác nhận">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/message2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="613.0" layoutY="113.0" mnemonicParsing="false" onAction="#manhinhQLKK" prefHeight="73.0" prefWidth="241.0" text="Kiểm kho">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/table.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="613.0" layoutY="231.0" mnemonicParsing="false" onAction="#manhinhQLPP" prefHeight="83.0" prefWidth="241.0" text="Quản lý phân phát">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/employee.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="error_label" layoutX="335.0" layoutY="392.0" prefHeight="17.0" prefWidth="164.0" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
          </children>
       </AnchorPane>
    </children>

@@ -53,9 +53,9 @@
             <Font name="System Bold Italic" size="19.0" />
          </font>
       </Label>
-      <Label fx:id="tennv_label" layoutX="694.0" layoutY="185.0" prefHeight="28.0" prefWidth="134.0">
+      <Label fx:id="tennv_label" layoutX="694.0" layoutY="185.0" prefHeight="28.0" prefWidth="134.0" textFill="#f80202">
          <font>
-            <Font size="19.0" />
+            <Font name="System Bold Italic" size="19.0" />
          </font>
       </Label>
       <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#dangxuat" prefHeight="51.0" prefWidth="186.0" text="Đăng xuất">
