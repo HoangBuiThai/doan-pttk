@@ -35,6 +35,9 @@ public class adminController implements Initializable {
     @FXML
     private AnchorPane qlap_Scene;
 
+    @FXML
+    private AnchorPane bc_Scene;
+
     ///Tab Quản lý khách hàng
     @FXML
     private Label manv_label;
@@ -94,6 +97,22 @@ public class adminController implements Initializable {
     @FXML
     private TextField giaap_text;
 
+    //Tab báo cáo
+    @FXML
+    private Label ngay_label;
+
+    @FXML
+    private TextArea noidung_textare;
+
+    @FXML
+    private TableView<Baocao> table_BC;
+
+    @FXML
+    private TableColumn<Baocao,Date> ngaybaocao_bc_column;
+
+    @FXML
+    private TableColumn<Baocao,String> noidung_bc_column;
+
     //Table Quản lý ấn phẩm
     @FXML
     private TableView<Anpham> table_Anpham;
@@ -129,6 +148,7 @@ public class adminController implements Initializable {
     private ObservableList<Nhanvien> listNhanvien;
     private ObservableList<Anpham> listAnpham;
     private ObservableList<NXB> listNXB;
+    private ObservableList<Baocao> listBC;
 
 
     @Override
@@ -138,6 +158,7 @@ public class adminController implements Initializable {
         this.loadNhanVien();
         qlap_Scene.setVisible(false);
         qlnv_Scene.setVisible(true);
+        bc_Scene.setVisible(false);
     }
 
     //Quản lý nhân viên
@@ -177,21 +198,40 @@ public class adminController implements Initializable {
     }
 
     //MỞ màn hình quản lý nhân viên
-    public void xemQLNV(ActionEvent event){
+    public void manhinhQLNV(ActionEvent event){
         qlap_Scene.setVisible(false);
         qlnv_Scene.setVisible(true);
+        bc_Scene.setVisible(false);
         this.loadCV_Combobox();
         this.loadQuan_Combobox();
         this.loadNhanVien();
     }
 
     //Mở màn hình quản lý ấn phẩm - Nhà Xuất bản
-    public void xemQLANPHAM(ActionEvent event){
+    public void manhinhQLAP(ActionEvent event){
         qlnv_Scene.setVisible(false);
         qlap_Scene.setVisible(true);
+        bc_Scene.setVisible(false);
         this.loadAnpham();
         this.loadNXB_Combobox();
         this.loadNXB();
+    }
+
+    //Mở màn hình quản lý báo cáo
+    public void manhinhBC(ActionEvent event){
+        bc_Scene.setVisible(true);
+        qlnv_Scene.setVisible(false);
+        qlap_Scene.setVisible(false);
+        this.loadBaoCao();
+    }
+
+    //Xem báo cáo
+    public void chitiet_Baocao(MouseEvent event){
+        Baocao selected = table_BC.getSelectionModel().getSelectedItem();
+
+        ngay_label.setText(String.valueOf(selected.getNgaybaocao()));
+        noidung_textare.setText(selected.getNoidung());
+
     }
 
     //Quản lý Ấn phẩm
@@ -265,7 +305,13 @@ public class adminController implements Initializable {
     }
 
     //method load
+    public void loadBaoCao(){
+        listBC = Baocao.HienThiBaoCao();
+        ngaybaocao_bc_column.setCellValueFactory(new PropertyValueFactory<Baocao,Date>("ngaybaocao"));
+        noidung_bc_column.setCellValueFactory(new PropertyValueFactory<Baocao,String>("noidung"));
 
+        table_BC.setItems(listBC);
+    }
 
     public void loadNhanVien(){
         manv_qlnv_column.setCellValueFactory(new PropertyValueFactory<Nhanvien,String>("manv"));

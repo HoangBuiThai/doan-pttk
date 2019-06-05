@@ -1,9 +1,6 @@
 package Controller;
 
-import Model.CTHD;
-import Model.KhachHang;
-import Model.Nhanvien;
-import Model.QuanHuyen;
+import Model.*;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,10 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -24,11 +18,23 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class managerController implements Initializable {
+
+    @FXML
+    private TextArea baocao_textarea;
+
+    @FXML
+    private Label error_label;
+
+    @FXML
+    private Label ngay_label;
 
     @FXML
     private Label manv_label;
@@ -88,6 +94,9 @@ public class managerController implements Initializable {
     private AnchorPane sceneQLKK;
 
     @FXML
+    private AnchorPane sceneBC;
+
+    @FXML
     private ComboBox<String> quanCombobox;
 
 
@@ -102,17 +111,38 @@ public class managerController implements Initializable {
         this.loadQuan();
         sceneQLPP.setVisible(false);
         sceneQLKK.setVisible(true);
+        sceneBC.setVisible(false);
     }
 
     public void manhinhQLPP(ActionEvent event){
         sceneQLPP.setVisible(true);
         sceneQLKK.setVisible(false);
+        sceneBC.setVisible(false);
         this.loadNhanvien();
     }
 
     public void manhinhQLKK(ActionEvent event){
         sceneQLPP.setVisible(false);
         sceneQLKK.setVisible(true);
+        sceneBC.setVisible(false);
+    }
+
+    public void manhinhBC(ActionEvent event){
+        sceneQLKK.setVisible(false);
+        sceneQLPP.setVisible(false);
+        sceneBC.setVisible(true);
+        this.load();
+
+    }
+
+    public void themBaocao(ActionEvent event){
+        try {
+            Baocao.themBaocao(baocao_textarea.getText());
+            this.load();
+            error_label.setText("Thêm thành công");
+        }catch (Exception e){
+            error_label.setText("Không thành công");
+        }
     }
 
     public void laychitietThongtinNV(MouseEvent event){
@@ -176,9 +206,18 @@ public class managerController implements Initializable {
     }
 
     public void load(){
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        //c.add(Calendar.DATE, 60);
+        date=c.getTime();
+
         macv_label.setText("");
         manv_label.setText("");
         tennv_label.setText("");
+        error_label.setText("");
+        ngay_label.setText(dateFormat.format(date));
         this.loadQuan();
 
     }

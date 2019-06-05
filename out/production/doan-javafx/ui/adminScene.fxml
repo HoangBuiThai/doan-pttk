@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -48,7 +49,7 @@
                   <TableColumn fx:id="password_qlnv_column" prefWidth="74.0" text="Pasword" />
               </columns>
             </TableView>
-            <Label layoutX="590.0" layoutY="1.0" prefHeight="26.0" prefWidth="175.0" text="Quản lý nhân viên" textFill="#e80606">
+            <Label layoutX="642.0" layoutY="1.0" prefHeight="26.0" prefWidth="175.0" text="Quản lý nhân viên" textFill="#e80606">
                <font>
                   <Font name="System Bold Italic" size="17.0" />
                </font>
@@ -129,7 +130,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="555.0" layoutY="351.0" mnemonicParsing="false" onAction="#xemQLANPHAM" prefHeight="53.0" prefWidth="275.0" text="Quản lý báo - NXB" textFill="#ff0c0c">
+            <Button layoutX="555.0" layoutY="351.0" mnemonicParsing="false" onAction="#manhinhQLAP" prefHeight="53.0" prefWidth="275.0" text="Quản lý báo - NXB" textFill="#ff0c0c">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -143,7 +144,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="qlap_Scene" layoutY="83.0" prefHeight="418.0" prefWidth="900.0">
+      <AnchorPane fx:id="qlap_Scene" layoutY="83.0" prefHeight="418.0" prefWidth="900.0" visible="false">
          <children>
             <TableView fx:id="table_Anpham" onMouseClicked="#chitiet_Anpham" prefHeight="265.0" prefWidth="495.0">
               <columns>
@@ -230,7 +231,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="543.0" layoutY="220.0" mnemonicParsing="false" onAction="#xemQLNV" prefHeight="35.0" prefWidth="281.0" text="Quản lý nhân viên" textFill="#4400ff">
+            <Button layoutX="543.0" layoutY="220.0" mnemonicParsing="false" onAction="#manhinhQLNV" prefHeight="35.0" prefWidth="281.0" text="Quản lý nhân viên" textFill="#4400ff">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -269,6 +270,68 @@
                      </image>
                   </ImageView>
                </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button layoutX="461.0" layoutY="3.0" mnemonicParsing="false" onAction="#manhinhBC" prefHeight="53.0" prefWidth="165.0" text="Xem báo cáo">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+          <graphic>
+              <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="/images/message2.png" />
+                  </image>
+              </ImageView>
+          </graphic>
+      </Button>
+      <AnchorPane fx:id="bc_Scene" layoutY="83.0" prefHeight="418.0" prefWidth="902.0">
+         <children>
+            <TableView fx:id="table_BC" onMouseClicked="#chitiet_Baocao" prefHeight="418.0" prefWidth="529.0">
+              <columns>
+                <TableColumn fx:id="ngaybaocao_bc_column" prefWidth="158.0" text="Ngày Báo cáo" />
+                <TableColumn fx:id="noidung_bc_column" prefWidth="370.0" text="Nội dung" />
+              </columns>
+            </TableView>
+            <TextArea fx:id="noidung_textare" layoutX="537.0" layoutY="97.0" prefHeight="200.0" prefWidth="351.0" />
+            <Label layoutX="681.0" layoutY="-4.0" text="Chi tiết" textFill="#3009f5">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="537.0" layoutY="47.0" text="Ngày">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="ngay_label" layoutX="644.0" layoutY="49.0" prefHeight="30.0" prefWidth="149.0" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Button layoutX="538.0" layoutY="331.0" mnemonicParsing="false" onAction="#manhinhQLNV" prefHeight="74.0" prefWidth="150.0" text="Quản lý NV">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+                <graphic>
+                    <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="/images/employee.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button layoutX="703.0" layoutY="330.0" mnemonicParsing="false" onAction="#manhinhQLAP" prefHeight="74.0" prefWidth="184.0" text="Quản lý Ấn phẩm">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+                <graphic>
+                    <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="/images/database_connect.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
             </Button>
          </children>
       </AnchorPane>
