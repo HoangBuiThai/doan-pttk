@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -75,9 +76,9 @@
             </ImageView>
          </graphic>
       </Button>
-      <AnchorPane fx:id="sceneQLPP" layoutY="86.0" prefHeight="411.0" prefWidth="900.0" visible="false">
+      <AnchorPane fx:id="sceneQLPP" layoutY="86.0" prefHeight="411.0" prefWidth="900.0">
          <children>
-            <TableView fx:id="tableNhanVien" onMouseClicked="#laychitietThongtinNV" prefHeight="419.0" prefWidth="572.0">
+            <TableView fx:id="tableNhanVien" layoutY="36.0" onMouseClicked="#laychitietThongtinNV" prefHeight="383.0" prefWidth="572.0">
               <columns>
                 <TableColumn fx:id="manv_nv_column" prefWidth="66.0" text="Mã NV" />
                 <TableColumn fx:id="maquan_nv_column" prefWidth="79.0" text="Mã Quận" />
@@ -163,9 +164,22 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Label layoutX="16.0" layoutY="9.0" text="Tìm nhân viên theo quận">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/images/btn_search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="TimNV" layoutX="239.0" layoutY="8.0" onKeyReleased="#timNhanvien" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="sceneBC" layoutY="86.0" prefHeight="419.0" prefWidth="900.0">
+      <AnchorPane fx:id="sceneBC" layoutY="86.0" prefHeight="419.0" prefWidth="900.0" visible="false">
          <children>
             <Label layoutX="241.0" layoutY="14.0" text="Báo cáo" textFill="#260ec3">
                <font>
@@ -220,5 +234,17 @@
                </font></Label>
          </children>
       </AnchorPane>
+      <Label layoutX="670.0" layoutY="26.0" text="Mã Quản lý">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="666.0" layoutY="65.0" text="Tên Quản lý">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="maql_label" layoutX="809.0" layoutY="31.0" />
+      <Label fx:id="tenql_label" layoutX="795.0" layoutY="70.0" />
    </children>
 </AnchorPane>

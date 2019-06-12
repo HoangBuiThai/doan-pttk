@@ -1,9 +1,10 @@
 package Controller;
 
-import DbConnection.ConnectionClass;
+
 import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,16 +14,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -97,6 +95,26 @@ public class adminController implements Initializable {
     @FXML
     private TextField giaap_text;
 
+    @FXML
+    private TextField TimNV;
+
+    @FXML
+    private TextField TimAP;
+
+    @FXML
+    private TextField TimNXB;
+
+    @FXML
+    private FilteredList filterNXB;
+
+    @FXML
+    private FilteredList filterAP;
+
+    @FXML
+    private FilteredList filterNV;
+
+
+
     //Tab báo cáo
     @FXML
     private Label ngay_label;
@@ -112,6 +130,9 @@ public class adminController implements Initializable {
 
     @FXML
     private TableColumn<Baocao,String> noidung_bc_column;
+
+    @FXML
+    private TableColumn<Baocao,String> manv_bc_column;
 
     //Table Quản lý ấn phẩm
     @FXML
@@ -193,6 +214,10 @@ public class adminController implements Initializable {
         this.loadNhanVien();
     }
 
+    public void timNhanvien(KeyEvent event){
+        Nhanvien.timNhanVien(TimNV,filterNV,table_QLNV);
+    }
+
     public void reset(ActionEvent event){
         this.load();
     }
@@ -228,20 +253,22 @@ public class adminController implements Initializable {
     //Xem báo cáo
     public void chitiet_Baocao(MouseEvent event){
         Baocao selected = table_BC.getSelectionModel().getSelectedItem();
-
-        ngay_label.setText(String.valueOf(selected.getNgaybaocao()));
-        noidung_textare.setText(selected.getNoidung());
+        if(selected!=null) {
+            ngay_label.setText(String.valueOf(selected.getNgaybaocao()));
+            noidung_textare.setText(selected.getNoidung());
+        }
 
     }
 
     //Quản lý Ấn phẩm
     public void chitiet_Anpham(MouseEvent event){
         Anpham selected = table_Anpham.getSelectionModel().getSelectedItem();
-
-        maap_label.setText(selected.getMaap());
-        tenap_text.setText(selected.getTenap());
-        giaap_text.setText(String.valueOf(selected.getGiatien()));
-        manxb_Combobox.getSelectionModel().select(selected.getManxb());
+        if(selected!=null) {
+            maap_label.setText(selected.getMaap());
+            tenap_text.setText(selected.getTenap());
+            giaap_text.setText(String.valueOf(selected.getGiatien()));
+            manxb_Combobox.getSelectionModel().select(selected.getManxb());
+        }
     }
 
     public void themAnpham(ActionEvent event){
@@ -262,12 +289,18 @@ public class adminController implements Initializable {
         this.loadAnpham();
     }
 
+    public void timAnpham(KeyEvent event){
+        Anpham.timAnpham(TimAP,filterAP,table_Anpham);
+    }
+
 
     //Quản lý Nhà xuất bản
     public void chitiet_NXB(MouseEvent event){
         NXB selected = table_NXB.getSelectionModel().getSelectedItem();
-        manxb_text.setText(selected.getManxb());
-        tennxb_text.setText(selected.getTennxb());
+        if(selected!=null) {
+            manxb_text.setText(selected.getManxb());
+            tennxb_text.setText(selected.getTennxb());
+        }
     }
 
     public void themNXB(ActionEvent event){
@@ -286,6 +319,10 @@ public class adminController implements Initializable {
     public void xoaNXB(ActionEvent event){
         NXB.xoaNXB(manxb_text.getText());
         this.loadNXB();
+    }
+
+    public void timNXB(KeyEvent event){
+        NXB.timNXB(TimNXB,filterNXB,table_NXB);
     }
 
     //đăng xuất
@@ -309,6 +346,7 @@ public class adminController implements Initializable {
         listBC = Baocao.HienThiBaoCao();
         ngaybaocao_bc_column.setCellValueFactory(new PropertyValueFactory<Baocao,Date>("ngaybaocao"));
         noidung_bc_column.setCellValueFactory(new PropertyValueFactory<Baocao,String>("noidung"));
+        manv_bc_column.setCellValueFactory(new PropertyValueFactory<Baocao,String>("manv"));
 
         table_BC.setItems(listBC);
     }
@@ -324,7 +362,9 @@ public class adminController implements Initializable {
 
         listNhanvien = Nhanvien.HienThiNhanVien();
         table_QLNV.setItems(listNhanvien);
+        filterNV = new FilteredList(listNhanvien, e->true);
         this.load();
+
     }
 
     public void loadAnpham(){
@@ -335,6 +375,7 @@ public class adminController implements Initializable {
         giaap_ap_column.setCellValueFactory(new PropertyValueFactory<Anpham,Integer>("giatien"));
 
         table_Anpham.setItems(listAnpham);
+        filterAP = new FilteredList(listAnpham, e->true);
         this.load();
 
     }
@@ -346,6 +387,7 @@ public class adminController implements Initializable {
         tennxb_nxb_column.setCellValueFactory(new PropertyValueFactory<NXB,String>("tennxb"));
 
         table_NXB.setItems(listNXB);
+        filterNXB= new FilteredList(listNXB,e->true);
         this.load();
         this.loadNXB_Combobox();
     }

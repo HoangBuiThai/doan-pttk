@@ -24,7 +24,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
-import java.util.function.Predicate;
+
 
 
 public class employeeController implements Initializable {
@@ -167,7 +167,7 @@ public class employeeController implements Initializable {
     }
 
     @FXML
-    public void TimKhachHang(KeyEvent event) throws IOException{
+    public void TimKhachHang(KeyEvent event) {
        KhachHang.timKhachHang(TimKH,filter,tableKH);
     }
 
