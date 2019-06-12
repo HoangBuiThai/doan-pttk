@@ -1,12 +1,13 @@
 package Controller;
 
-import DbConnection.ConnectionClass;
+
 import Model.Anpham;
 import Model.CTHD;
 import Model.Hoadon;
-import Model.KhachHang;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,18 +17,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.view.JasperViewer;
 
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import java.sql.SQLOutput;
 import java.util.*;
 import java.util.Date;
 
@@ -60,6 +58,12 @@ public class hoadonController implements Initializable {
 
     @FXML
     private Label error_label1;
+
+    @FXML
+    private TextField TimAP;
+
+    @FXML
+    private FilteredList filterAP;
 
     @FXML
     private TableView<Hoadon> table_Hoadon;
@@ -121,13 +125,14 @@ public class hoadonController implements Initializable {
 
     @FXML
     private ComboBox<Integer> timeCombobox ;
+
     private ObservableList<Integer> time=FXCollections.observableArrayList(1,2,3,4);
 
     private ObservableList<Hoadon> list_hd;
 
     private ObservableList<Anpham> list_anpham;
 
-    private  ObservableList<CTHD>  list_cthd ;
+    private ObservableList<CTHD>  list_cthd ;
 
 
 
@@ -255,6 +260,11 @@ public class hoadonController implements Initializable {
         this.loadHD();
     }
 
+    public void timAP(KeyEvent event){
+        Anpham.timAnpham(TimAP,filterAP,table_Anpham);
+        System.out.println("elllo");
+    }
+
     public void loadCTHD(String mahd){
 
         list_cthd = CTHD.HienThiCTHD(mahd);
@@ -289,6 +299,7 @@ public class hoadonController implements Initializable {
         tenap_ap_column.setCellValueFactory(new PropertyValueFactory<Anpham,String>("tenap"));
         gia_ap_column.setCellValueFactory(new PropertyValueFactory<Anpham,Integer>("giatien"));
         table_Anpham.setItems(list_anpham);
+        filterAP = new FilteredList(list_anpham,e->true);
 
     }
 

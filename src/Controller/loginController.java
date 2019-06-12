@@ -70,6 +70,8 @@ public class loginController implements Initializable {
                     loader.setLocation(getClass().getResource("../ui/managerScene.fxml"));
                     Parent managerScene = loader.load();
                     Scene scene = new Scene(managerScene);
+                    managerController mController = loader.getController();
+                    mController.setDetail(manv,name);
                     stage.setTitle("Quản lý Kho");
                     stage.setScene(scene);
                 }else if(job.equals("GH")&&!maquan.isEmpty()){
@@ -82,6 +84,8 @@ public class loginController implements Initializable {
                     sController.setDetail(manv,name,maquan);
                     stage.setTitle("Shipper");
                     stage.setScene(scene);
+                }else {
+                    errorTextfield.setText("Sai");
                 }
             }else {
                 errorTextfield.setText("Sai");

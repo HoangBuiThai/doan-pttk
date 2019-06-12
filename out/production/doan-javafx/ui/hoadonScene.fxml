@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -50,7 +51,7 @@
          </font></Label>
       <AnchorPane fx:id="cthd_scene" layoutY="116.0" prefHeight="384.0" prefWidth="900.0">
          <children>
-            <TableView fx:id="table_Anpham" onMouseClicked="#getDetailBao" prefHeight="384.0" prefWidth="480.0">
+            <TableView fx:id="table_Anpham" layoutY="31.0" onMouseClicked="#getDetailBao" prefHeight="353.0" prefWidth="480.0">
               <columns>
                 <TableColumn fx:id="maap_ap_column" prefWidth="96.0" text="Mã ấn phẩm" />
                 <TableColumn fx:id="manxb_ap_column" prefWidth="111.0" text="Mã NXB" />
@@ -137,6 +138,12 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Label layoutX="38.0" layoutY="4.0" text="Tìm Ấn phẩm">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TimAP" layoutX="166.0" layoutY="2.0" onKeyReleased="#timAP" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="hd_scene" layoutY="122.0" prefHeight="376.0" prefWidth="900.0" visible="false" AnchorPane.bottomAnchor="0.0">

@@ -16,13 +16,15 @@ import java.util.Date;
 public class Baocao {
     private Date ngaybaocao;
     private String noidung;
+    private String manv;
 
-    public Baocao() {
-    }
-
-    public Baocao(Date ngaybaocao, String noidung) {
+    public Baocao(Date ngaybaocao, String noidung, String manv) {
         this.ngaybaocao = ngaybaocao;
         this.noidung = noidung;
+        this.manv = manv;
+    }
+
+    public Baocao() {
     }
 
     public Date getNgaybaocao() {
@@ -41,7 +43,15 @@ public class Baocao {
         this.noidung = noidung;
     }
 
-    public static void themBaocao(String noidung){
+    public String getManv() {
+        return manv;
+    }
+
+    public void setManv(String manv) {
+        this.manv = manv;
+    }
+
+    public static void themBaocao(String noidung, String manv){
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
         Calendar c = Calendar.getInstance();
@@ -55,11 +65,12 @@ public class Baocao {
         Connection conn = DbConnection.getConnectionAdmin();
         CallableStatement callableStatement;
 
-        String sql_insert_baocao = "{call thembaocao(to_date(?, 'DD-MM-YYYY'),?)}";
+        String sql_insert_baocao = "{call thembaocao(to_date(?, 'DD-MM-YYYY'),?,?)}";
         try{
             callableStatement = conn.prepareCall(sql_insert_baocao);
             callableStatement.setString(1,dateFormat.format(date));
             callableStatement.setString(2,noidung);
+            callableStatement.setString(3,manv);
             callableStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -79,7 +90,7 @@ public class Baocao {
             ResultSet rs = conn.createStatement().executeQuery(sql_query_baocao);
             listBC = FXCollections.observableArrayList();
             while(rs.next()){
-                listBC.add(new Baocao(rs.getDate(1),rs.getString(2)));
+                listBC.add(new Baocao(rs.getDate(1),rs.getString(2),rs.getString(3)));
             }
 
         } catch (SQLException e) {

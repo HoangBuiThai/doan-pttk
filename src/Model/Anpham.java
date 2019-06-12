@@ -3,12 +3,17 @@ package Model;
 import DbConnection.ConnectionClass;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.function.Predicate;
 
 
 public class Anpham {
@@ -131,5 +136,22 @@ public class Anpham {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void timAnpham(TextField TimAP, FilteredList filter, TableView tableAP){
+        TimAP.textProperty().addListener((observable, oldValue, newValue) -> {
+            filter.setPredicate((Predicate<? super Anpham>) ap->{
+                if(newValue.isEmpty()||newValue==null){
+                    return true;
+                }else if(ap.getTenap().toUpperCase().contains(newValue.toUpperCase())){
+                    return true;
+                }
+                return false;
+            });
+        });
+
+        SortedList sort = new SortedList(filter);
+        sort.comparatorProperty().bind(tableAP.comparatorProperty());
+        tableAP.setItems(sort);
     }
 }

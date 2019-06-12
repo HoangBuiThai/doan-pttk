@@ -2,6 +2,7 @@ package Controller;
 
 import Model.*;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -29,6 +31,12 @@ public class managerController implements Initializable {
 
     @FXML
     private TextArea baocao_textarea;
+
+    @FXML
+    private Label maql_label;
+
+    @FXML
+    private Label tenql_label;
 
     @FXML
     private Label error_label;
@@ -50,6 +58,12 @@ public class managerController implements Initializable {
 
     @FXML
     private Label macv_label;
+
+    @FXML
+    private TextField TimNV;
+
+    @FXML
+    private FilteredList filter;
 
     @FXML
     private TableView<CTHD> tableKiemKho;
@@ -104,6 +118,11 @@ public class managerController implements Initializable {
     private ObservableList<String> listQuanHuyen;
     private ObservableList<Nhanvien> listNhanVienGH;
 
+    public void setDetail(String maql, String tenql){
+        maql_label.setText(maql);
+        tenql_label.setText(tenql);
+        System.out.println(maql);
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -137,7 +156,7 @@ public class managerController implements Initializable {
 
     public void themBaocao(ActionEvent event){
         try {
-            Baocao.themBaocao(baocao_textarea.getText());
+            Baocao.themBaocao(baocao_textarea.getText(),maql_label.getText());
             this.load();
             error_label.setText("Thêm thành công");
         }catch (Exception e){
@@ -153,6 +172,10 @@ public class managerController implements Initializable {
         password_label.setText(selected.getPassword());
         macv_label.setText(selected.getMacv());
         quanCombobox.getSelectionModel().select(selected.getMaQuan());
+    }
+
+    public void timNhanvien(KeyEvent event){
+        Nhanvien.timNhanvienGiaoHangTheoQuan(TimNV,filter,tableNhanVien);
     }
 
     public void dangxuat(ActionEvent event){
@@ -203,6 +226,7 @@ public class managerController implements Initializable {
         password_nv_column.setCellValueFactory(new PropertyValueFactory<Nhanvien,String>("password"));
 
         tableNhanVien.setItems(listNhanVienGH);
+        filter = new FilteredList(listNhanVienGH,e->true);
     }
 
     public void load(){

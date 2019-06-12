@@ -3,7 +3,11 @@ package Model;
 import DbConnection.ConnectionClass;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -13,6 +17,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.function.Predicate;
 
 public class Nhanvien {
     private String manv;
@@ -201,5 +206,39 @@ public class Nhanvien {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void timNhanVien(TextField TimNV, FilteredList filter, TableView tableNV){
+        TimNV.textProperty().addListener((observable, oldValue, newValue) -> {
+            filter.setPredicate((Predicate<? super Nhanvien>) nv->{
+                if(newValue.isEmpty()||newValue==null){
+                    return true;
+                }else if(nv.getHoten().toUpperCase().contains(newValue.toUpperCase())){
+                    return true;
+                }
+                return false;
+            });
+        });
+
+        SortedList sort = new SortedList(filter);
+        sort.comparatorProperty().bind(tableNV.comparatorProperty());
+        tableNV.setItems(sort);
+    }
+
+    public static void timNhanvienGiaoHangTheoQuan(TextField MaQuan, FilteredList filter, TableView tableNV){
+        MaQuan.textProperty().addListener((observable, oldValue, newValue) -> {
+            filter.setPredicate((Predicate<? super Nhanvien>) nv->{
+                if(newValue.isEmpty()||newValue==null){
+                    return true;
+                }else if(nv.getMaQuan().toUpperCase().contains(newValue.toUpperCase())){
+                    return true;
+                }
+                return false;
+            });
+        });
+
+        SortedList sort = new SortedList(filter);
+        sort.comparatorProperty().bind(tableNV.comparatorProperty());
+        tableNV.setItems(sort);
     }
 }
