@@ -1,5 +1,5 @@
 # #doan-pttk
-# #Đồ án môn phân tích thiết kế - App đầu đời
+# #Đồ án môn phân tích thiết kế - First app
 # #JAVAFX
 # #INTELIJI
 # #JDK 8
